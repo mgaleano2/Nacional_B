@@ -16,7 +16,7 @@ LEAGUE = "Argentina Nacional B"
 OUT = "data/top_jugadores_nb.csv"
 METADATA = "data/ultima_actualizacion.txt"
 DETALLES_CSV = "data/player_details.csv"
-MIN_MINUTOS = 300
+MIN_MINUTOS = 180
 
 os.makedirs("data", exist_ok=True)
 
