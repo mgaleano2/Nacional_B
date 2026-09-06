@@ -580,7 +580,9 @@ vista = vista.rename(columns={c: RENOMBRES.get(c, c) for c in vista.columns})
 
 config = {}
 for c in vista.columns:
-    if pd.api.types.is_numeric_dtype(vista[c]):
+    if c == "Jugador":
+        config[c] = st.column_config.TextColumn(label="Jugador", pinned=True)
+    elif pd.api.types.is_numeric_dtype(vista[c]):
         if pd.api.types.is_integer_dtype(vista[c]):
             config[c] = st.column_config.NumberColumn(format="%d")
         else:
